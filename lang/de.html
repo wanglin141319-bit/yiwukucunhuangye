@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DirectSource China | Direktbeschaffung aus chinesischen Großhandelsmärkten</title>
+  <meta name="description" content="Direkt vom Großhandelsmarkt China einkaufen, ohne Zwischenhändler. Wir helfen internationalen Käufern, echte Lieferanten zu Herstellerpreisen zu finden.">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--white:#FFFFFF;--off-white:#FAFAFA;--light-gray:#F5F5F5;--gray:#9CA3AF;--dark-gray:#6B7280;--charcoal:#1F2937;--black:#111827;--accent:#F97316;--accent-dark:#EA580C;--accent-light:#FFF7ED;--trust-blue:#2563EB;--success:#10B981}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Manrope',sans-serif;background:var(--white);color:var(--charcoal);line-height:1.6}
+    nav{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--light-gray);z-index:1000;padding:0 24px}
+    .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:72px}
+    .logo{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--black);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:32px;align-items:center}
+    .nav-links a{color:var(--dark-gray);text-decoration:none;font-weight:500;font-size:0.9375rem;transition:color 0.2s}
+    .nav-links a:hover{color:var(--black)}
+    .nav-cta{background:var(--accent);color:var(--white)!important;padding:10px 20px;border-radius:8px;font-weight:600!important}
+    .lang-switch{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--light-gray);border-radius:8px;text-decoration:none;color:var(--charcoal);font-size:0.875rem;font-weight:600}
+    .sticky-contact{position:fixed;bottom:24px;right:24px;display:flex;flex-direction:column;gap:12px;z-index:999}
+    .sticky-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.15);cursor:pointer;transition:transform 0.2s;text-decoration:none}
+    .sticky-btn:hover{transform:translateY(-2px)}
+    .telegram-btn{background:#0088cc}
+    .whatsapp-btn{background:#25D366}
+    .sticky-btn svg{width:28px;height:28px;fill:white}
+    .hero{min-height:100vh;display:flex;align-items:center;padding:120px 24px 80px;background:linear-gradient(135deg,var(--white) 0%,var(--light-gray) 100%)}
+    .hero-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
+    .hero-content{position:relative;z-index:1}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);border:1px solid rgba(249,115,22,0.2);padding:8px 16px;border-radius:100px;font-size:0.875rem;font-weight:600;color:var(--accent-dark);margin-bottom:24px}
+    .hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;line-height:1.1;color:var(--black);margin-bottom:24px}
+    .hero h1 .highlight{color:var(--accent)}
+    .hero-subtitle{font-size:1.25rem;color:var(--dark-gray);margin-bottom:40px;max-width:500px;line-height:1.7}
+    .hero-cta-group{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:10px;font-weight:600;font-size:1rem;text-decoration:none;transition:all 0.2s;cursor:pointer;border:none}
+    .btn-primary{background:var(--accent);color:var(--white);box-shadow:0 4px 16px rgba(249,115,22,0.3)}
+    .btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+    .btn-secondary{background:var(--white);color:var(--charcoal);border:2px solid var(--light-gray)}
+    .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+    .trust-signals{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:12px}
+    .trust-icon{width:40px;height:40px;background:var(--white);border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+    .trust-icon svg{width:20px;height:20px;stroke:var(--accent)}
+    .trust-text{font-size:0.9375rem}
+    .trust-text strong{display:block;color:var(--black);font-weight:600}
+    .trust-text span{color:var(--dark-gray);font-size:0.875rem}
+    .hero-visual{position:relative}
+    .hero-image-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .hero-img-card{border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.1)}
+    .hero-img-card.large{grid-column:span 2}
+    .hero-img-card img{width:100%;height:200px;object-fit:cover;display:block}
+    .hero-img-card.large img{height:280px}
+    .stats-bar{background:var(--black);padding:48px 24px}
+    .stats-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px}
+    .stat-item{text-align:center}
+    .stat-number{font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:8px}
+    .stat-label{color:var(--gray);font-size:0.9375rem}
+    .trust-section{padding:100px 24px;background:var(--white)}
+    .section-header{text-align:center;max-width:700px;margin:0 auto 64px}
+    .section-label{display:inline-block;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:16px}
+    .section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--black);margin-bottom:16px}
+    .section-desc{font-size:1.125rem;color:var(--dark-gray);line-height:1.7}
+    .trust-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .trust-card{background:var(--off-white);border-radius:16px;padding:32px;transition:transform 0.3s}
+    .trust-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.08)}
+    .trust-card-icon{width:56px;height:56px;background:var(--accent-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+    .trust-card-icon svg{width:28px;height:28px;stroke:var(--accent)}
+    .trust-card h3{font-size:1.25rem;font-weight:700;color:var(--black);margin-bottom:12px}
+    .trust-card p{color:var(--dark-gray);line-height:1.6}
+    .team-section{padding:80px 24px;background:var(--light-gray)}
+    .team-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .team-image{border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15)}
+    .team-image img{width:100%;height:400px;object-fit:cover;display:block}
+    .team-content h2{font-family:'Space Grotesk',sans-serif;font-size:2.25rem;font-weight:700;color:var(--black);margin-bottom:24px}
+    .team-content p{font-size:1.125rem;color:var(--dark-gray);line-height:1.8;margin-bottom:24px}
+    .team-features{display:flex;flex-direction:column;gap:16px}
+    .team-feature{display:flex;align-items:center;gap:12px}
+    .team-feature-check{width:24px;height:24px;background:var(--success);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .team-feature-check svg{width:14px;height:14px;stroke:white;stroke-width:3}
+    .team-feature span{font-weight:500;color:var(--charcoal)}
+    .directory-section{padding:100px 24px;background:var(--white)}
+    .directory-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+    .supplier-card{background:var(--white);border:1px solid var(--light-gray);border-radius:16px;overflow:hidden;transition:transform 0.3s}
+    .supplier-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.1)}
+    .supplier-image{position:relative;height:200px;overflow:hidden}
+    .supplier-image img{width:100%;height:100%;object-fit:cover}
+    .supplier-badge{position:absolute;top:16px;left:16px;background:var(--white);padding:6px 12px;border-radius:6px;font-size:0.75rem;font-weight:600;color:var(--charcoal)}
+    .supplier-verified{position:absolute;top:16px;right:16px;width:32px;height:32px;background:var(--success);border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .supplier-verified svg{width:18px;height:18px;stroke:white;stroke-width:3}
+    .supplier-info{padding:24px}
+    .supplier-category{font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:8px}
+    .supplier-name{font-size:1.25rem;font-weight:700;color:var(--black);margin-bottom:16px}
+    .supplier-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px}
+    .meta-item{font-size:0.875rem}
+    .meta-item span{color:var(--dark-gray)}
+    .meta-item strong{color:var(--charcoal);display:block;font-weight:600}
+    .supplier-location{display:flex;align-items:center;gap:6px;font-size:0.875rem;color:var(--dark-gray);margin-bottom:20px}
+    .supplier-location svg{width:16px;height:16px;stroke:var(--accent)}
+    .supplier-btn{width:100%;background:var(--light-gray);color:var(--charcoal);padding:14px;border-radius:10px;border:none;font-weight:600;font-size:0.9375rem;cursor:pointer;transition:all 0.2s}
+    .supplier-btn:hover{background:var(--accent);color:var(--white)}
+    .services-section{padding:100px 24px;background:linear-gradient(180deg,var(--light-gray) 0%,var(--white) 100%)}
+    .services-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+    .service-card{background:var(--white);border-radius:20px;padding:40px;border:1px solid var(--light-gray);position:relative;overflow:hidden;transition:transform 0.3s}
+    .service-card:hover{transform:translateY(-4px)}
+    .service-card.featured{border-color:var(--accent);box-shadow:0 8px 32px rgba(249,115,22,0.1)}
+    .service-card.featured::before{content:'BELIEBT';position:absolute;top:20px;right:-30px;background:var(--accent);color:var(--white);padding:6px 40px;font-size:0.75rem;font-weight:700;transform:rotate(45deg)}
+    .service-icon{width:64px;height:64px;background:var(--accent-light);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+    .service-icon svg{width:32px;height:32px;stroke:var(--accent)}
+    .service-card h3{font-size:1.5rem;font-weight:700;color:var(--black);margin-bottom:12px}
+    .service-price{font-size:2.5rem;font-weight:800;color:var(--accent);margin-bottom:16px}
+    .service-price span{font-size:1rem;font-weight:500;color:var(--dark-gray)}
+    .service-card p{color:var(--dark-gray);margin-bottom:24px;line-height:1.7}
+    .service-features{list-style:none;margin-bottom:32px}
+    .service-features li{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--light-gray);font-size:0.9375rem;color:var(--charcoal)}
+    .service-features li:last-child{border-bottom:none}
+    .service-features li svg{width:18px;height:18px;stroke:var(--success);flex-shrink:0}
+    .service-btn{width:100%;background:var(--black);color:var(--white);padding:16px;border-radius:10px;border:none;font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.2s}
+    .service-card.featured .service-btn{background:var(--accent)}
+    .service-btn:hover{opacity:0.9}
+    .lead-section{padding:100px 24px;background:var(--charcoal);position:relative}
+    .lead-container{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1}
+    .lead-section h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--white);margin-bottom:16px}
+    .lead-section .section-desc{color:var(--gray);margin-bottom:40px}
+    .lead-form{display:flex;gap:12px;max-width:560px;margin:0 auto 32px}
+    .lead-form input{flex:1;padding:18px 24px;border:2px solid transparent;border-radius:12px;font-size:1rem;font-family:inherit;outline:none}
+    .lead-form input:focus{border-color:var(--accent)}
+    .lead-form button{background:var(--accent);color:var(--white);padding:0 32px;border-radius:12px;border:none;font-weight:700;font-size:1rem;cursor:pointer;transition:all 0.2s}
+    .lead-form button:hover{background:var(--accent-dark)}
+    .lead-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+    .lead-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:10px;font-weight:600;text-decoration:none;transition:all 0.2s}
+    .lead-btn svg{width:20px;height:20px}
+    .lead-btn.telegram{background:#0088cc;color:var(--white)}
+    .lead-btn.whatsapp{background:#25D366;color:var(--white)}
+    .lead-btn:hover{opacity:0.9;transform:translateY(-2px)}
+    .testimonials-section{padding:100px 24px;background:var(--white)}
+    .testimonials-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+    .testimonial-card{background:var(--off-white);border-radius:16px;padding:32px}
+    .testimonial-stars{display:flex;gap:4px;margin-bottom:16px}
+    .testimonial-stars svg{width:18px;height:18px;fill:var(--accent)}
+    .testimonial-quote{font-size:1.125rem;line-height:1.7;color:var(--charcoal);margin-bottom:24px;font-style:italic}
+    .testimonial-author{display:flex;align-items:center;gap:16px}
+    .author-avatar{width:48px;height:48px;background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:1.125rem}
+    .author-info strong{display:block;color:var(--black);font-weight:600}
+    .author-info span{font-size:0.875rem;color:var(--dark-gray)}
+    footer{background:var(--black);padding:60px 24px 32px}
+    .footer-container{max-width:1200px;margin:0 auto}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+    .footer-brand h3{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:16px}
+    .footer-brand h3 span{color:var(--accent)}
+    .footer-brand p{color:var(--gray);line-height:1.7;max-width:300px}
+    .footer-links h4{color:var(--white);font-weight:600;margin-bottom:20px}
+    .footer-links ul{list-style:none}
+    .footer-links li{margin-bottom:12px}
+    .footer-links a{color:var(--gray);text-decoration:none;font-size:0.9375rem;transition:color 0.2s}
+    .footer-links a:hover{color:var(--white)}
+    .footer-social{display:flex;gap:12px;margin-top:24px}
+    .social-link{width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:background 0.2s}
+    .social-link:hover{background:var(--accent)}
+    .social-link svg{width:20px;height:20px;fill:var(--white)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .footer-bottom p{color:var(--gray);font-size:0.875rem}
+    .popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:2000;opacity:0;visibility:hidden;transition:all 0.3s}
+    .popup-overlay.active{opacity:1;visibility:visible}
+    .popup-modal{background:var(--white);border-radius:20px;padding:48px;max-width:480px;width:90%;text-align:center;position:relative;transform:scale(0.9);transition:transform 0.3s}
+    .popup-overlay.active .popup-modal{transform:scale(1)}
+    .popup-close{position:absolute;top:16px;right:16px;width:32px;height:32px;background:var(--light-gray);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .popup-close:hover{background:var(--gray)}
+    .popup-close svg{width:16px;height:16px;stroke:var(--charcoal)}
+    .popup-icon{width:80px;height:80px;background:var(--accent-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+    .popup-icon svg{width:40px;height:40px;stroke:var(--accent)}
+    .popup-modal h3{font-family:'Space Grotesk',sans-serif;font-size:1.75rem;font-weight:700;color:var(--black);margin-bottom:12px}
+    .popup-modal p{color:var(--dark-gray);margin-bottom:32px;line-height:1.6}
+    .popup-form{display:flex;flex-direction:column;gap:12px}
+    .popup-form input{padding:16px 20px;border:2px solid var(--light-gray);border-radius:10px;font-size:1rem;font-family:inherit;outline:none}
+    .popup-form input:focus{border-color:var(--accent)}
+    .popup-form button{background:var(--accent);color:var(--white);padding:16px;border-radius:10px;border:none;font-weight:700;font-size:1rem;cursor:pointer;transition:background 0.2s}
+    .popup-form button:hover{background:var(--accent-dark)}
+    .popup-alt{margin-top:20px;color:var(--dark-gray);font-size:0.9375rem}
+    .popup-alt a{color:var(--trust-blue);text-decoration:none;font-weight:600}
+    @media(max-width:1024px){.hero-container{grid-template-columns:1fr;text-align:center}.hero-subtitle{margin-left:auto;margin-right:auto}.hero-cta-group{justify-content:center}.trust-signals{justify-content:center}.hero-visual{max-width:500px;margin:0 auto}.team-container{grid-template-columns:1fr;text-align:center}.team-features{align-items:center}.footer-top{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.nav-links{display:none}.hero{padding:100px 20px 60px}.hero h1{font-size:2rem}.lead-form{flex-direction:column}.footer-top{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;text-align:center}.services-grid,.directory-grid,.testimonials-grid{grid-template-columns:1fr}}
+    @media(max-width:480px){.sticky-contact{bottom:16px;right:16px}.sticky-btn{width:48px;height:48px}.trust-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">Direct<span>Source</span></a>
+      <div class="nav-links">
+        <a href="#trust">Warum Wir</a>
+        <a href="#suppliers">Lieferanten</a>
+        <a href="#services">Leistungen</a>
+        <a href="#contact">Kontakt</a>
+        <a href="#contact" class="nav-cta">Loslegen</a>
+        <a href="../index.html" class="lang-switch">🇺🇸 EN</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sticky-contact">
+    <a href="https://t.me/jakemamark" target="_blank" class="sticky-btn telegram-btn" title="Per Telegram kontaktieren">
+      <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-.994-.654-.35-1.01.217-1.598.148-.153 2.722-2.495 2.773-2.706a.207.207 0 0 0-.048-.185c-.054-.054-.157-.036-.225-.024-.096.022-1.627 1.034-4.594 3.043-.435.298-.829.443-1.183.435-.389-.009-1.138-.22-1.695-.4-.68-.228-1.22-.35-1.173-.736.024-.202.303-.408.835-.621 3.269-1.422 5.451-2.361 6.547-2.818 3.121-1.298 3.772-1.523 4.196-1.53z"/></svg>
+    </a>
+    <a href="https://wa.me/86138yourwa" target="_blank" class="sticky-btn whatsapp-btn" title="Per WhatsApp kontaktieren">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">📍 Ansässig in Yiwu, China</div>
+        <h1>Direkt vom chinesischen Großhandelsmarkt <span class="highlight">(Ohne Zwischenhändler)</span></h1>
+        <p class="hero-subtitle">Wir helfen internationalen Käufern, echte Lieferanten zu Herstellerpreisen zu finden. Amazon-Händler, Shopify-Betreiber und Großhändler — alle willkommen.</p>
+        <div class="hero-cta-group">
+          <a href="#services" class="btn btn-primary">📋 Lieferantenliste erhalten ($)</a>
+          <a href="https://t.me/jakemamark" target="_blank" class="btn btn-secondary">✈️ Per Telegram kontaktieren</a>
+        </div>
+        <div class="trust-signals">
+          <div class="trust-item">
+            <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="trust-text"><strong>Märkte Yiwu und Wu Ai</strong><span>Tägliche Beschaffung vor Ort</span></div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div class="trust-text"><strong>Verifizierte Lieferanten</strong><span>Persönliche Fabriksbesuche</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-grid">
+          <div class="hero-img-card"><img src="https://images.unsplash.com/photo-1556742049-0cfed4376d45?w=600&h=400&fit=crop" alt="Markt Yiwu"></div>
+          <div class="hero-img-card"><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&h=400&fit=crop" alt="Großhandelsprodukte"></div>
+          <div class="hero-img-card large"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=600&fit=crop" alt="Chinesischer Großhandelsmarkt"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Verifizierte Lieferanten</div></div>
+      <div class="stat-item"><div class="stat-number">120+</div><div class="stat-label">Zufriedene Kunden</div></div>
+      <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Produktkategorien</div></div>
+      <div class="stat-item"><div class="stat-number">24h</div><div class="stat-label">Antwortzeit</div></div>
+    </div>
+  </section>
+
+  <section class="trust-section" id="trust">
+    <div class="section-header">
+      <span class="section-label">Warum Uns Wählen</span>
+      <h2 class="section-title">Warum Uns Vertrauen?</h2>
+      <p class="section-desc">Wir sind nicht nur ein weiteres Online-Verzeichnis. Wir sind echte Menschen in Yiwu, die täglich persönlich Lieferanten überprüfen.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Tägliche Marktbesuche</h3>
+        <p>Wir besuchen täglich persönlich die Märkte von Yiwu und Wu Ai. Unser Team durchläuft die Gänge, spricht mit Lieferanten und überprüft die Qualität vor Ort.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Echte Verbindungen</h3>
+        <p>Jahre des Beziehungsaufbaus bedeuten, dass wir wissen, wer seine Zusagen einhält. Vermeiden Sie Versuch und Irrtum — wir haben es bereits für Sie getan.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Schnelle Kommunikation</h3>
+        <p>Erhalten Sie Antworten innerhalb von Stunden, nicht Tagen. Wir sind während der Geschäftszeiten in Telegram und WhatsApp erreichbar — echte Menschen, echte Antworten.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Verifizierte Qualität</h3>
+        <p>Jeder Lieferant in unserer Liste wurde persönlich besucht und verifiziert. Wir überprüfen Produktionskapazitäten, Qualitätskontrolle und Zuverlässigkeit.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Herstellerpreise</h3>
+        <p>Ohne Zwischenhändlermarge. Wir verbinden Sie direkt mit Herstellerpreisen. Halten Sie Ihre Margen hoch und Ihre Kosten niedrig.</p>
+      </div>
+      <div class="trust-card">
+        <div class="trust-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>120+ zufriedene Kunden</h3>
+        <p>Amazon-Händler, Shopify-Betreiber und Großhändler vertrauen uns bei der Suche nach ihren Lieferanten. Lesen Sie unten, was sie sagen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="team-container">
+      <div class="team-image"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop" alt="Unser Team"></div>
+      <div class="team-content">
+        <h2>Lernen Sie Ihren Einkaufsagenten Kennen</h2>
+        <p>Ich arbeite seit über 5 Jahren auf dem Yiwu-Markt. Ich kenne jede Ecke, jeden Lieferanten und jeden Qualitätstrick. Wenn Sie mit uns arbeiten, erhalten Sie keinen anonymen Service — Sie erhalten einen Partner, der sich wirklich um den Erfolg Ihres Unternehmens kümmert.</p>
+        <div class="team-features">
+          <div class="team-feature"><div class="team-feature-check"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div><span>Ansässig in Yiwu — täglicher Marktpräsenz</span></div>
+          <div class="team-feature"><div class="team-feature-check"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div><span>Fließende Kommunikation auf Englisch und Chinesisch</span></div>
+          <div class="team-feature"><div class="team-feature-check"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div><span>Transparente Preisgestaltung — keine versteckten Gebühren</span></div>
+          <div class="team-feature"><div class="team-feature-check"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div><span>Erreichbar über Telegram und WhatsApp</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="directory-section" id="suppliers">
+    <div class="section-header">
+      <span class="section-label">Lieferantenverzeichnis</span>
+      <h2 class="section-title">Empfohlene Lieferanten</h2>
+      <p class="section-desc">Ausgewählte Lieferanten von den Märkten Yiwu und Wu Ai. Alle verifiziert, alle direkt vom Hersteller. Kontaktieren Sie uns, um zu beginnen.</p>
+    </div>
+    <div class="directory-grid">
+      <div class="supplier-card">
+        <div class="supplier-image">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=400&fit=crop" alt="Elektronik">
+          <span class="supplier-badge">Elektronik</span>
+          <div class="supplier-verified"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </div>
+        <div class="supplier-info">
+          <div class="supplier-category">Elektronik und Gadgets</div>
+          <h3 class="supplier-name">Yiwu Tech Electronics Fabrik</h3>
+          <div class="supplier-meta">
+            <div class="meta-item"><span>Preisbereich</span><strong>2$ - 15$ / Stück</strong></div>
+            <div class="meta-item"><span>Mindestbestellung</span><strong>50 Stück</strong></div>
+          </div>
+          <div class="supplier-location"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yiwu International Trade City</div>
+          <button class="supplier-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Agent kontaktieren</button>
+        </div>
+      </div>
+      <div class="supplier-card">
+        <div class="supplier-image">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop" alt="Mode">
+          <span class="supplier-badge">Mode</span>
+          <div class="supplier-verified"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </div>
+        <div class="supplier-info">
+          <div class="supplier-category">Mode-Accessoires</div>
+          <h3 class="supplier-name">StyleMax Accessories Co.</h3>
+          <div class="supplier-meta">
+            <div class="meta-item"><span>Preisbereich</span><strong>0,5$ - 8$ / Stück</strong></div>
+            <div class="meta-item"><span>Mindestbestellung</span><strong>100 Stück</strong></div>
+          </div>
+          <div class="supplier-location"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wu Ai Markt, Zone B</div>
+          <button class="supplier-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Agent kontaktieren</button>
+        </div>
+      </div>
+      <div class="supplier-card">
+        <div class="supplier-image">
+          <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&h=400&fit=crop" alt="Haus">
+          <span class="supplier-badge">Haus</span>
+          <div class="supplier-verified"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </div>
+        <div class="supplier-info">
+          <div class="supplier-category">Haus und Dekor</div>
+          <h3 class="supplier-name">HomeStyle Decor Fabrik</h3>
+          <div class="supplier-meta">
+            <div class="meta-item"><span>Preisbereich</span><strong>1$ - 25$ / Stück</strong></div>
+            <div class="meta-item"><span>Mindestbestellung</span><strong>30 Stück</strong></div>
+          </div>
+          <div class="supplier-location"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yiwu International Trade City</div>
+          <button class="supplier-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Agent kontaktieren</button>
+        </div>
+      </div>
+      <div class="supplier-card">
+        <div class="supplier-image">
+          <img src="https://images.unsplash.com/photo-1571781926291-47928d18719a?w=600&h=400&fit=crop" alt="Schönheit">
+          <span class="supplier-badge">Schönheit</span>
+          <div class="supplier-verified"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </div>
+        <div class="supplier-info">
+          <div class="supplier-category">Schönheit und Körperpflege</div>
+          <h3 class="supplier-name">Glow Beauty Manufacturing</h3>
+          <div class="supplier-meta">
+            <div class="meta-item"><span>Preisbereich</span><strong>0,3$ - 5$ / Stück</strong></div>
+            <div class="meta-item"><span>Mindestbestellung</span><strong>200 Stück</strong></div>
+          </div>
+          <div class="supplier-location"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wu Ai Markt, Zone A</div>
+          <button class="supplier-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Agent kontaktieren</button>
+        </div>
+      </div>
+      <div class="supplier-card">
+        <div class="supplier-image">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop" alt="Spielzeug">
+          <span class="supplier-badge">Spielzeug</span>
+          <div class="supplier-verified"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </div>
+        <div class="supplier-info">
+          <div class="supplier-category">Spielzeug und Spiele</div>
+          <h3 class="supplier-name">FunLand Toys Fabrik</h3>
+          <div class="supplier-meta">
+            <div class="meta-item"><span>Preisbereich</span><strong>1$ - 20$ / Stück</strong></div>
+            <div class="meta-item"><span>Mindestbestellung</span><strong>24 Stück</strong></div>
+          </div>
+          <div class="supplier-location"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yiwu Spielzeugmarkt</div>
+          <button class="supplier-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Agent kontaktieren</button>
+        </div>
+      </div>
+      <div class="supplier-card">
+        <div class="supplier-image">
+          <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&h=400&fit=crop" alt="Küche">
+          <span class="supplier-badge">Küche</span>
+          <div class="supplier-verified"><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </div>
+        <div class="supplier-info">
+          <div class="supplier-category">Küchenartikel</div>
+          <h3 class="supplier-name">KitchenPro Fabrik</h3>
+          <div class="supplier-meta">
+            <div class="meta-item"><span>Preisbereich</span><strong>2$ - 30$ / Stück</strong></div>
+            <div class="meta-item"><span>Mindestbestellung</span><strong>50 Stück</strong></div>
+          </div>
+          <div class="supplier-location"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Yiwu International Trade City</div>
+          <button class="supplier-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Agent kontaktieren</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" id="services">
+    <div class="section-header">
+      <span class="section-label">Unsere Leistungen</span>
+      <h2 class="section-title">Wie Wir Helfen Können</h2>
+      <p class="section-desc">Von gebrauchsfertigen Lieferantenlisten bis zum vollständigen Beschaffungsservice — wir haben Optionen für jedes Budget und jede Anforderung.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h3>Basis-Lieferantenliste</h3>
+        <div class="service-price">9$ <span>Einmalzahlung</span></div>
+        <p>Beginnen Sie mit unserer kuratierten Liste von 50 verifizierten Lieferanten in beliebten Kategorien.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>50 verifizierte Lieferanten</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Beliebte Kategorien abgedeckt</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Preis- und Mindestbestellinfos</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Sofortiger Download</li>
+        </ul>
+        <button class="service-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Erhalten — 9$</button>
+      </div>
+      <div class="service-card featured">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>Premium-Lieferantenliste</h3>
+        <div class="service-price">29$ <span>Einmalzahlung</span></div>
+        <p>Unser beliebtestes Paket — 200+ Premium-Lieferanten mit exklusiven Kontakten.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>200+ verifizierte Lieferanten</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Alle Kategorien</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Exklusive Kontakte</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Bewertungen und Rezensionen</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>30 Tage Support</li>
+        </ul>
+        <button class="service-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Erhalten — 29$</button>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3>Vollständiger Beschaffungsservice</h3>
+        <div class="service-price">Individuell</div>
+        <p>Überlassen Sie uns alles — von der Lieferantensuche bis zur Qualitätsprüfung und Versandkoordination.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Dedizierter Agent</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Werksüberprüfung</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Qualitätsinspektion</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Preisverhandlung</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>Versandkoordination</li>
+        </ul>
+        <button class="service-btn" onclick="window.open('https://t.me/jakemamark','_blank')">Angebot anfordern</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="lead-section" id="contact">
+    <div class="lead-container">
+      <h2>Sprechen Sie mit einem Echten Beschaffungsagenten in China</h2>
+      <p class="section-desc">Erhalten Sie direkte Antworten auf Ihre Fragen. Ohne Bots, ohne Warten — nur echte Hilfe von jemandem vor Ort in Yiwu.</p>
+      <form class="lead-form" onsubmit="event.preventDefault();alert('Danke! Wir werden uns in Kürze bei Ihnen melden.');this.reset()">
+        <input type="email" placeholder="Ihre E-Mail-Adresse" required>
+        <button type="submit">Kostenlosen Leitfaden erhalten</button>
+      </form>
+      <div class="lead-buttons">
+        <a href="https://t.me/jakemamark" target="_blank" class="lead-btn telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-.994-.654-.35-1.01.217-1.598.148-.153 2.722-2.495 2.773-2.706a.207.207 0 0 0-.048-.185c-.054-.054-.157-.036-.225-.024-.096.022-1.627 1.034-4.594 3.043-.435.298-.829.443-1.183.435-.389-.009-1.138-.22-1.695-.4-.68-.228-1.22-.35-1.173-.736.024-.202.303-.408.835-.621 3.269-1.422 5.451-2.361 6.547-2.818 3.121-1.298 3.772-1.523 4.196-1.53z"/></svg>
+          Telegram-Nachricht
+        </a>
+        <a href="https://wa.me/86138yourwa" target="_blank" class="lead-btn whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp-Nachricht
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="section-header">
+      <span class="section-label">Kundenstimmen</span>
+      <h2 class="section-title">Was Unsere Kunden Sagen</h2>
+      <p class="section-desc">Echte Rezensionen von Amazon-Händlern, Shopify-Betreibern und Großhändlern, die uns vertrauen.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"Sie haben mir geholfen, innerhalb von nur 3 Tagen zuverlässige Lieferanten für meinen Amazon-Shop zu finden. Die Preise waren viel besser als das, was ich vorher bezahlt habe — meine Margen sind um 35% gestiegen."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MK</div>
+          <div class="author-info"><strong>Mike K.</strong><span>Amazon-Händler, USA</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"Gute Kommunikation und schnelle Antworten. Zuerst war ich skeptisch, aber sie haben tatsächlich die Fabrik besucht und mir Fotos geschickt. Sehr professioneller Service."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SL</div>
+          <div class="author-info"><strong>Sarah L.</strong><span>Shopify-Betreiberin, UK</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"Die Premium-Lieferantenliste hat mir Wochen an Recherche erspart. Lohnt sich absolut. Ich habe bereits meine erste Bestellung über einen ihrer Kontakte aufgegeben."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JR</div>
+          <div class="author-info"><strong>James R.</strong><span>Großhändler, Australien</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Direct<span>Source</span></h3>
+          <p>Wir helfen globalen Käufern, direkt vom chinesischen Großhandelsmarkt einzukaufen. Ohne Zwischenhändler, ohne Marge — nur direkte Fabrikverbindungen.</p>
+          <div class="footer-social">
+            <a href="https://t.me/jakemamark" target="_blank" class="social-link"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-.994-.654-.35-1.01.217-1.598.148-.153 2.722-2.495 2.773-2.706a.207.207 0 0 0-.048-.185c-.054-.054-.157-.036-.225-.024-.096.022-1.627 1.034-4.594 3.043-.435.298-.829.443-1.183.435-.389-.009-1.138-.22-1.695-.4-.68-.228-1.22-.35-1.173-.736.024-.202.303-.408.835-.621 3.269-1.422 5.451-2.361 6.547-2.818 3.121-1.298 3.772-1.523 4.196-1.53z"/></svg></a>
+            <a href="https://wa.me/86138yourwa" target="_blank" class="social-link"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            <a href="mailto:wanglin141319@gmail.com" class="social-link"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Schnelllinks</h4>
+          <ul>
+            <li><a href="#trust">Warum Wir</a></li>
+            <li><a href="#suppliers">Lieferanten</a></li>
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Leistungen</h4>
+          <ul>
+            <li><a href="#services">Lieferantenlisten</a></li>
+            <li><a href="#services">Vollständige Beschaffung</a></li>
+            <li><a href="#services">Marktbesuche</a></li>
+            <li><a href="#services">Qualitätskontrolle</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="https://t.me/jakemamark">Telegram</a></li>
+            <li><a href="https://wa.me/86138yourwa">WhatsApp</a></li>
+            <li><a href="mailto:wanglin141319@gmail.com">E-Mail</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 DirectSource. Alle Rechte vorbehalten.</p>
+        <p>Ansässig in Yiwu, China | Wir bedienen Käufer weltweit</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup-overlay" id="leadPopup">
+    <div class="popup-modal">
+      <button class="popup-close" onclick="document.getElementById('leadPopup').classList.remove('active')">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="popup-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+      <h3>Erhalten Sie unsere Top-50-Lieferantenliste</h3>
+      <p>Geben Sie Ihre E-Mail ein und wir senden Ihnen unsere kuratierte Liste verifizierter Yiwu-Lieferanten — völlig kostenlos.</p>
+      <form class="popup-form" onsubmit="event.preventDefault();alert('Danke! Überprüfen Sie Ihre E-Mail.');document.getElementById('leadPopup').classList.remove('active');this.reset()">
+        <input type="email" placeholder="Ihre E-Mail" required>
+        <button type="submit">Liste zusenden</button>
+      </form>
+      <p class="popup-alt">Bevorzugen Sie Instant Messaging? <a href="https://t.me/jakemamark" target="_blank">Kontaktieren Sie uns auf Telegram</a></p>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(()=>{if(!sessionStorage.getItem('popupShown')){document.getElementById('leadPopup').classList.add('active');sessionStorage.setItem('popupShown','true')}},5000);
+    document.getElementById('leadPopup').addEventListener('click',e=>{if(e.target.classList.contains('popup-overlay'))document.getElementById('leadPopup').classList.remove('active')});
+  </script>
+</body>
+</html>
